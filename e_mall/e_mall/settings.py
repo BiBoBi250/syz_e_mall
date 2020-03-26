@@ -72,11 +72,11 @@ PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.MD5PasswordHasher',
     'django.contrib.auth.hashers.CryptPasswordHasher',
 ]
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        # 'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS':['vue_e_mall/dist'],  # 该目录是vue项目的名称
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -159,13 +159,12 @@ STATIC_URL = '/static/'
 
 # 静态文件
 STATICFILES_DIRS = [
-
     # 替换反斜杠
-    os.path.join(BASE_DIR, 'static').replace('\\', '/')
+    os.path.join(BASE_DIR, 'vue_e_mall/dist/static').replace('\\', '/')
 ]
 
 # STATIC_ROOT 用于部署时候将静态文件全部集中存放,根目录从盘区开始，所以尽量使用绝对路径
-STATIC_ROOT = 'd:/syz/virtualenvs/e_mall/e_mall/nginx/static/'
+# STATIC_ROOT = 'd:/syz/virtualenvs/e_mall/e_mall/nginx/static/'
 
 # 缓存
 CACHES = {
