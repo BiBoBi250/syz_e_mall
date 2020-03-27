@@ -27,7 +27,8 @@ class Shopping_trolley(models.Model):
 
     # 商品简单描述
     intro = models.TextField(verbose_name=_('content'),
-                             help_text=_('A briefly describe'))
+                             help_text=_('A briefly describe'),
+                             )
 
     # 商品价格,正整数
     price = models.PositiveIntegerField(verbose_name=_('商品价格'),
@@ -49,6 +50,7 @@ class Shopping_trolley(models.Model):
     store = models.BooleanField(verbose_name=_('商品上架状态'),
                                 help_text=_('商品上架还是下架，店铺存在还是不存在'),
                                 default=True)
+
 
 
     class Meta:

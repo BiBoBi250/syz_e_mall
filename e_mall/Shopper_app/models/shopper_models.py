@@ -36,6 +36,18 @@ class Shoppers(models.Model):
                                    max_length=4
                                    )
 
+    # 性别
+    sex_choice = (
+        ('m', '男'),
+        ('f', '女'),
+    )
+    sex = models.CharField(verbose_name=_('性别'),
+                           help_text=_('性别'),
+                           blank=True,
+                           choices=sex_choice,
+                           max_length=1,
+                           )
+
     shoppers_ = Manager()
 
     class Meta:
@@ -56,6 +68,7 @@ class Store(models.Model):
                                   error_messages={
                                       'unique': _("A Store with that store_name already exists."),
                                   },
+                                  blank=True
                                   )
     # 商家表
     shopper = models.OneToOneField(User,
@@ -74,7 +87,8 @@ class Store(models.Model):
     province = models.CharField(verbose_name=_('省份'),
                                 help_text=_('Please select province'),
                                 max_length=10,
-                                choices=province_choice
+                                choices=province_choice,
+                                blank=True
                                 )
     # 市
     city_choice = (
@@ -84,20 +98,22 @@ class Store(models.Model):
                                    help_text=_('Please select city'),
                                    max_length=20,
                                    choices=city_choice,
+                                   blank=True
                                    )
 
     # 被关注量
     attention = models.PositiveIntegerField(verbose_name=_('关注量'),
                                             help_text=_('Store attention'),
-                                            default=0)
+                                            default=0,
+                                            )
 
     # 店铺评分,max_digits表示最大位数，decimal_places=1表示精度（小数)位数
     shop_grade = models.DecimalField(verbose_name=_('shop grade'),
                                      help_text=_('Please write shop grade about this shop'),
                                      max_digits=2,
                                      decimal_places=1,
-                                     default=0.0, )
-
+                                     default=0.0,
+                                     )
 
     store_ = Manager()
 
@@ -107,3 +123,38 @@ class Store(models.Model):
 
     def __str__(self):
         return self.store_name
+
+class Ip(models.Model):
+    """Ip表"""
+    # 登录总次数
+    ips = models.CharField(verbose_name=_('ip地址'),
+                           help_text=_('ip地址'),
+                           max_length=12,
+                           )
+    # 当前日期
+    login_time  = models.DateTimeField(verbose_name=_('上线时间'),
+                                help_text=_('登录的时间'),
+                                auto_now_add=True,
+                                )
+    # 商家
+    shopper = models.ForeignKey(User,verbose_name=_('商家'),
+                                help_text=_('商家'),
+                                on_delete=models.CASCADE,
+                                related_name='ip')
+    # 下线时间
+    exit_time = models.DateTimeField(verbose_name=_('下线时间'),
+                                     help_text=_('退出网站的时间'),
+                                     blank=True,
+                                     )
+
+    ip_ = Manager()
+
+    class meta:
+        ordering = ('-date')
+        verbose_name = _('记录表')
+        verbose_name_plural = _('记录表')
+
+
+    def __str__(self):
+        return self.shopper.username
+

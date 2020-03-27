@@ -166,6 +166,21 @@ STATICFILES_DIRS = [
 # STATIC_ROOT 用于部署时候将静态文件全部集中存放,根目录从盘区开始，所以尽量使用绝对路径
 # STATIC_ROOT = 'd:/syz/virtualenvs/e_mall/e_mall/nginx/static/'
 
+# celery 设置,用于实例化
+# celery 中间人 redis://redis服务所在的ip地址:端口号/数据库号
+BROKER_URL = 'redis://:syzxss247179876@127.0.0.1:6379/0'
+
+# celery结果返回，可用于跟踪结果
+CELERY_RESULT_BACKEND = 'redis://:syzxss247179876@127.0.0.1:6379/1'
+
+CELERY_TASK_SERIALIZER = 'json'
+
+CELERY_RESULT_SERIALIZER = 'json'
+
+# celery时区设置，使用settings中TIME_ZONE同样的时区
+CELERY_TIME_ZONE = TIME_ZONE
+
+
 # 缓存
 CACHES = {
     'default':
@@ -209,6 +224,34 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # 是否关闭浏览器使得Session过�
 
 SESSION_SAVE_EVERY_REQUEST = False  # 是否每次请求都保存Session，默认修改之后才保存
 
+
+# 代理以及端口必须有
+EMAIL_HOST = 'smtp.qq.com'  # 发送邮件的stmp服务器
+EMAIL_PORT = 25  # stmp协议的端口号,本地使用
+
+EMAIL_HOST_USER = '247179876@qq.com'  # 发送邮件的地址
+
+# 本来填的自己的账号密码，但是不行的.
+# EMAIL_HOST_PASSWORD =os.environ['PASSWORDD']
+
+EMAIL_HOST_PASSWORD = 'mazstyfnbdbfbjhf'  # 发送邮件的授权码
+
+# 这里的是前缀，也就是头
+EMAIL_SUBJECT_PREFIX = u'[Sercheif]'
+
+# TLS和SSL是互斥的
+# TLS是安全传输层协议，是SSL3.0的升级版，它利用对称加密、公私钥不对称加密及其密钥交换算法，CA系统进行加密且可信任的信息传输
+EMAIL_USE_TLS = True  # 是否使用TLS安全传输协议(用于在两个通信应用程序之间提供保密性和数据完整性。)
+# SSLError [SSL：UNKNOWN_PROTOCOL] unknow如果出现，就将EMAIL_USE_SSL置为False
+
+# SSL是安全套接层协议
+# EMAIL_PORT = 465 搭配SSL
+EMAIL_USE_SSL = False  # 使用安全ssl加密，qq企业邮箱要求使用
+
+# 有这个就会显示是你的邮箱，别人收到的邮件中会有这个设定的名称
+EMAIL_FROM = '拼夕夕商城<247179876@qq.com>'
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'  # 添加帧格式
 
 # 首页跳转地址
 SIMPLEUI_INDEX = '/'

@@ -6,6 +6,7 @@
         <list>
           <option value="Remark_app.models.remark_models.User" />
           <option value="Shop_app.models.commodity_models.Commodity.*" />
+          <option value="django.contrib.auth.models.User.DoesNotExist" />
         </list>
       </option>
     </inspection_tool>
