@@ -6,7 +6,7 @@
      <!--<button class="login_btn el-button el-button&#45;&#45;primary is-round" type="primary" round>登录</button>-->
       <el-button class="login_btn" @click.native="login" type="primary" round :loading="isBtnLoading">登录</el-button>
       <div style="margin-top: 10px">
-        <span style="float:left;color: #409eff;" @click="login">手机账号登陆</span><span style="margin:0px 10px 0px 10px  ;color: #409eff;" @click="login">注册</span><span style="float: right;color: #A9A9AB" @click="login">忘记密码？</span>
+        <span style="float:left;color: #409eff;" @click="login">手机账号登陆</span><span style="margin:0px 10px 0px 10px  ;color: #409eff;" @click="register">注册</span><span style="float: right;color: #A9A9AB" @click="login">忘记密码？</span>
       </div>
     </div>
   </div>
@@ -44,9 +44,12 @@
             this.$message.error('请输入密码');
             return;
           }
-
+        },
+        register(){
+          this.$router.push('/Register');    //点击注册跳转到注册页面
         }
       }
+
     }
 </script>
 
@@ -57,12 +60,12 @@
     padding-right: 40%;
   }
   .qxs-ic_user {
-    background: url("../../assets/login/ic_user.png") no-repeat;
+    /*background: url("../../assets/login/ic_user.png") no-repeat;*/
     background-size: 13px 15px;
     background-position: 3%;
   }
   .qxs-ic_password {
-    background: url("../../assets/login/ic_password.png") no-repeat;
+    /*background: url("../../assets/login/ic_password.png") no-repeat;*/
     background-size: 13px 15px;
     background-position: 3%;
     margin-bottom: 20px;
