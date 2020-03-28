@@ -11,7 +11,7 @@ def set_verification_code() -> str:
     """自定义验证码"""
     code = ''
     # 设置随机种子
-    random.seed(random.randint(1, 100))
+    random.seed(random.randint(101, 200))
     for i in range(6):
         m = random.randrange(1, 9)
         if i == m:
@@ -23,11 +23,5 @@ def set_verification_code() -> str:
 
 @app.task
 def send_verification(title, content, user_email):
-    """
-    发送邮件
-    title:标题
-    content:内容
-    user_email:对方邮箱
-    """
-    # fail_Silently为False表示会出错会报异常，方便捕捉
+    """发送邮件"""
     send_mail(title, content, EMAIL_HOST_USER, [user_email], fail_silently=False)

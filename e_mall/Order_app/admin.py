@@ -81,15 +81,15 @@ class OrderAdmin(admin.ModelAdmin):
 
     # 写在admin中，模型实例用obj代替
     def commodity_name(self, obj):
-        '''返回商品的名称'''
+        """返回商品的名称"""
         return obj.commodity.commodity_name
 
     def commodity_category(self, obj):
-        '''返回商品的种类'''
+        """返回商品的种类"""
         return obj.commodity.category
 
     def has_add_permission(self, request):
-        '''取消所有商家增加订单的功能'''
+        """取消所有商家增加订单的功能"""
         return False
 
     def make_Checked(self, request, querysets):

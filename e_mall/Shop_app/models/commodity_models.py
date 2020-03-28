@@ -13,20 +13,20 @@ from User_app.models.user_models import Consumer
 class Shopping_trolley(models.Model):
     """购物车表"""
     # 商品数量
-    quantity = models.PositiveIntegerField(verbose_name=_('quantity'),
+    quantity = models.PositiveIntegerField(verbose_name=_('商品数量'),
                                            help_text=_('The quantity of this goods'),
                                            default=0,
                                            )
     # 用户
-    user = models.OneToOneField(Consumer,
-                                verbose_name='用户',
-                                help_text=('购物车归属的用户'),
-                                on_delete=models.CASCADE,
-                                related_name='shopping_trolley'
-                                )
+    consumer = models.OneToOneField(User,
+                                    verbose_name='用户',
+                                    help_text=('购物车归属的用户'),
+                                    on_delete=models.CASCADE,
+                                    related_name='shopping_trolley'
+                                    )
 
     # 商品简单描述
-    intro = models.TextField(verbose_name=_('content'),
+    intro = models.TextField(verbose_name=_('商品简介'),
                              help_text=_('A briefly describe'),
                              )
 
@@ -50,8 +50,6 @@ class Shopping_trolley(models.Model):
     store = models.BooleanField(verbose_name=_('商品上架状态'),
                                 help_text=_('商品上架还是下架，店铺存在还是不存在'),
                                 default=True)
-
-
 
     class Meta:
         verbose_name = _('购物车')

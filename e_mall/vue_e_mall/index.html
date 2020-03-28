@@ -25,6 +25,10 @@
         </li>
       </ol>
     </div>
+    <div id="demo5">
+      <p>{{message}}</p>
+      <button v-on:click="reverseMessage">反转消息</button>
+    </div>
     <script type="text/javascript">
        var demo1 = new Vue({
          el: "#demo1",
@@ -54,6 +58,18 @@
            ]
          }
        });
+       var demo5 = new Vue({
+         el:"#demo5",
+         data:{
+           message:'亲成我上马',
+         },
+         methods:{
+          reverseMessage:function(){
+            //vue对象可以直接操控数据
+            this.message = this.message.split('').reverse().join('')
+          }
+         }
+       })
 
     </script>
     <!-- built files will be auto injected -->

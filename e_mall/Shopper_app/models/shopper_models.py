@@ -47,6 +47,12 @@ class Shoppers(models.Model):
                            choices=sex_choice,
                            max_length=1,
                            )
+    # 头像
+    head_image = models.ImageField(verbose_name=_('头像'),
+                                   help_text=('Please upload your portrait'),
+                                   upload_to='head',
+                                   blank=True,
+                                   )
 
     shoppers_ = Manager()
 

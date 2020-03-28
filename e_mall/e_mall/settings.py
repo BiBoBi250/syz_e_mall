@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+# from django.conf.global_settings import EMAIL_HOST_USER
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -59,6 +60,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'e_mall.urls'
 
+# 重写后端认证类，所有的认证方法都会使用它
+AUTHENTICATION_BACKENDS = ['e_mall.authentication_rewrite.Email_or_Username',]
 
 # AUTH_USER_MODEL = 'Manager_app.Manager_user'
 
