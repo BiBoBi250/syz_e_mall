@@ -20,9 +20,9 @@ logging.basicConfig(filename='Shopper_app/error.log',
 
 class Response_code:
     result = {
-        'code': '1',
-        'msg': 'login',
-        'status': 'success',
+        'code': '',
+        'msg': '',
+        'status': '',
         'data': '',
     }
     @property
@@ -222,7 +222,7 @@ class Verification_code(APIView):
             self.content.format(code)
             try:
                 # 发送验证码
-                tasks.send_verification(title=self.title, content=self.content, user_email=email)
+                tasks.send_verification.delay(title=self.title, content=self.content, user_email=email)
                 request.session['verification_code'] = code
                 return JsonResponse(response_code.email_verification_success)
             except Exception as e:

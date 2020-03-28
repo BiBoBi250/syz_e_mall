@@ -1,31 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90f3cd27-4a4a-4bb2-afa5-f9998555ae7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Manager_app/views/tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Order_app/views/tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Remark_app/views/tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop_app/views/tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shopper_app/views/shppoer_register_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shopper_app/views/tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/User_app/views/tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/User_app/views/user_register_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e_mall/celery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e_mall/response_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/ASUS.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/ASUS.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="90f3cd27-4a4a-4bb2-afa5-f9998555ae7e" name="Default Changelist" comment="1.加入celery异步执行任务&#10;2.制定了一套业务response_code&#10;3.完成了商家登录注册，发送验证码的基于restful_Api的功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Order_app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Remark_app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Remark_app/migrations/0002_auto_20200325_1805.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Remark_app/migrations/0003_auto_20200325_1936.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop_app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop_app/models/commodity_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Shop_app/models/commodity_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shopper_app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shopper_app/models/shopper_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Shopper_app/models/shopper_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User_app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/e_mall/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/e_mall/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e_mall/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/e_mall/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shopper_app/views/shppoer_register_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/Shopper_app/views/shppoer_register_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e_mall/response_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/e_mall/response_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_e_mall/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue_e_mall/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_e_mall/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue_e_mall/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue_e_mall/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue_e_mall/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,23 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Shopper_app/views/shppoer_register_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="199" column="44" selection-start-line="199" selection-start-column="44" selection-end-line="199" selection-end-column="44" />
-              <folding>
-                <element signature="e#2#53#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/e_mall/response_code.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+            <state relative-caret-position="238">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -60,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/e_mall/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="93">
-              <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
+              <caret line="202" selection-start-line="202" selection-end-line="202" />
             </state>
           </provider>
         </entry>
@@ -69,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/Shopper_app/views/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="298">
-              <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -81,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/../../../Lib/site-packages/django/core/mail/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="975">
-              <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+              <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -118,18 +97,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shopper_app/models/shopper_models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -226,15 +193,15 @@
         <option value="$PROJECT_DIR$/e_mall/__init__.py" />
         <option value="$PROJECT_DIR$/e_mall/settings.py" />
         <option value="$PROJECT_DIR$/Shopper_app/views/tasks.py" />
-        <option value="$PROJECT_DIR$/e_mall/response_code.py" />
         <option value="$PROJECT_DIR$/Shopper_app/views/shppoer_register_api.py" />
+        <option value="$PROJECT_DIR$/e_mall/response_code.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="293" />
-    <option name="y" value="213" />
-    <option name="width" value="1098" />
+    <option name="x" value="505" />
+    <option name="y" value="101" />
+    <option name="width" value="1099" />
     <option name="height" value="885" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -251,22 +218,6 @@
             <path>
               <item name="e_mall" type="b2602c69:ProjectViewProjectNode" />
               <item name="e_mall" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="e_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e_mall" type="462c0819:PsiDirectoryNode" />
-              <item name="e_mall" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="e_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e_mall" type="462c0819:PsiDirectoryNode" />
-              <item name="Shopper_app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="e_mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e_mall" type="462c0819:PsiDirectoryNode" />
-              <item name="Shopper_app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -386,14 +337,20 @@
       <option name="project" value="LOCAL" />
       <updated>1585217469012</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1.加入celery异步执行任务&#10;2.制定了一套业务response_code&#10;3.完成了商家登录注册，发送验证码的基于restful_Api的功能">
+      <created>1585314077707</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585314077707</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1479" height="878" extended-state="6" />
-    <editor active="true" />
+    <frame x="405" y="82" width="878" height="708" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22059847" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3791866" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -456,7 +413,8 @@
     <MESSAGE value="1.修改表的结构，将外键参照由Shopper表转移到User表&#10;2.增加按钮样式&#10;3.自定义Remark的app下的表的list_display,对Remark表添加filter过滤，权限，queryset查询集等。&#10;4.分别重写Commodity表和Shopper表的get_readonly_fields的钩子函数，实现根据状态限制只读。&#10;5.将表的verbose_name从英文修改为中文" />
     <MESSAGE value="1.提交上一个版本漏掉的migrations文件" />
     <MESSAGE value="1.将vue整合到django上" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.将vue整合到django上" />
+    <MESSAGE value="1.加入celery异步执行任务&#10;2.制定了一套业务response_code&#10;3.完成了商家登录注册，发送验证码的基于restful_Api的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.加入celery异步执行任务&#10;2.制定了一套业务response_code&#10;3.完成了商家登录注册，发送验证码的基于restful_Api的功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -469,8 +427,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../Lib/site-packages/django/db/models/base.py" />
-    <entry file="file://$PROJECT_DIR$/../../Lib/site-packages/django/db/models/sql/query.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/datetime.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -736,7 +692,7 @@
     <entry file="file://$PROJECT_DIR$/Shopper_app/views/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
-          <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -746,31 +702,42 @@
     <entry file="file://$PROJECT_DIR$/../../../Lib/site-packages/django/core/mail/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
-          <caret line="50" column="46" lean-forward="true" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Lib/site-packages/tornado/test/gen_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Lib/site-packages/celery/beat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="74" column="27" lean-forward="true" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/e_mall/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
-          <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e_mall/response_code.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <caret line="202" selection-start-line="202" selection-end-line="202" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Shopper_app/views/shppoer_register_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="199" column="44" selection-start-line="199" selection-start-column="44" selection-end-line="199" selection-end-column="44" />
-          <folding>
-            <element signature="e#2#53#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e_mall/response_code.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>

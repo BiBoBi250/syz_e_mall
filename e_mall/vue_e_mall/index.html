@@ -3,10 +3,59 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>vue_e_mall</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="demo1">
+      {{ name }}{{age}}
+    </div>
+    <div id="demo2">
+      <span v-bind:title="message">
+        按住我不要放手哦~
+      </span>
+    </div>
+    <div id="demo3">
+      <p v-if="seen">你好厉害咯！</p>
+    </div>
+    <div id="demo4">
+      <ol>
+        <li v-for="introduction in introductions">
+          {{ introduction.intro }}
+        </li>
+      </ol>
+    </div>
+    <script type="text/javascript">
+       var demo1 = new Vue({
+         el: "#demo1",
+         data:{
+           name:'syz',
+           age:'19',
+         }
+       });
+       var demo2 = new Vue({
+         el:"#demo2",
+         data:{
+           message:'看我看我看我'+new Date().toLocaleString()
+         }
+       });
+       var demo3 = new Vue({
+         el:"#demo3",
+         data:{
+           seen:true,
+         }
+       });
+       var demo4 = new Vue({
+         el:"#demo4",
+         data:{
+            introductions:[
+             {intro:'我爱学习'},
+             {intro:'我不爱学习'},
+           ]
+         }
+       });
+
+    </script>
     <!-- built files will be auto injected -->
   </body>
 </html>
